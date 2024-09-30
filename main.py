@@ -2,7 +2,7 @@ from argparse import ArgumentParser
 from dotenv import load_dotenv
 
 import logging
-
+import webserver
 from core import Bond
 
 
@@ -40,3 +40,4 @@ if __name__ == "__main__":
 
     bot = Bond()
     bot.run(debug=debug, cogs=args.cogs, sync=args.sync)
+webserver.keep_alive()
